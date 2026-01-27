@@ -1,0 +1,342 @@
+/* =========================
+   DESIGN TOKENS (THEME)
+   ========================= */
+
+:root {
+  /* Base blues */
+  --blue-975: #050814;
+  --blue-950: #070b1a;
+  --blue-900: #0b1026;
+  --blue-850: #0f1633;
+  --blue-800: #131c40;
+
+  --blue-300: #9fb2ff;
+  --blue-200: #c7d1ff;
+  --blue-100: #eef1ff;
+
+  /* Accent blues */
+  --accent-600: #3b5cff;
+  --accent-500: #4a6cff;
+  --accent-400: #6f88ff;
+
+  /* Semantic tokens */
+  --bg: var(--blue-950);
+  --surface: var(--blue-900);
+  --surface-muted: var(--blue-850);
+  --border: rgba(199, 209, 255, 0.12);
+
+  --text-primary: var(--blue-100);
+  --text-secondary: var(--blue-200);
+  --text-muted: #9aa6d6;
+
+  --accent: var(--accent-500);
+  --accent-soft: rgba(74, 108, 255, 0.18);
+
+  /* Effects */
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(4, 8, 32, 0.6);
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f8ff;
+  --surface: #ffffff;
+  --surface-muted: #f1f4ff;
+  --border: rgba(11, 16, 38, 0.12);
+
+  --text-primary: #0b1026;
+  --text-secondary: #1e2a5a;
+  --text-muted: #4b5aa3;
+
+  --accent: #3b5cff;
+  --accent-soft: rgba(59, 92, 255, 0.15);
+
+  --shadow: 0 12px 28px rgba(11, 16, 38, 0.12);
+}
+
+/* =========================
+   RESET & GLOBALS
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height: 1.6;
+  background:
+    radial-gradient(1000px 600px at 20% 10%, rgba(74,108,255,.18), transparent 55%),
+    radial-gradient(900px 600px at 90% 0%, rgba(111,136,255,.12), transparent 55%),
+    var(--bg);
+  color: var(--text-primary);
+}
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+main {
+  padding: 42px 0 70px;
+}
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-soft);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.site-nav a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background: var(--accent-soft);
+  outline: 1px solid rgba(74,108,255,0.35);
+}
+
+.nav-toggle,
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 8px 10px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+section {
+  margin: 26px 0;
+  padding: 26px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#hero {
+  padding: 42px 26px;
+}
+
+#hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin: 0 0 8px;
+}
+
+#hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin-bottom: 6px;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin: 14px 0;
+}
+
+.features {
+  margin-top: 8px;
+}
+
+.features li {
+  margin: 6px 0;
+}
+
+#projects h3 a {
+  color: var(--text-primary);
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  font-weight: 600;
+}
+
+#projects h3 a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================
+   CONTACT 
+   ========================= */
+
+#contact p {
+  color: var(--text-secondary);
+}
+
+#contact a {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+#contact a:hover {
+  color: var(--accent);
+}
+
+/* Optional subtle elevation */
+#contact {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface) 92%, transparent),
+    color-mix(in srgb, var(--surface-muted) 92%, transparent)
+  );
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+  text-decoration-color: var(--accent-soft);
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* =========================
+   MOBILE NAV
+   ========================= */
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    right: 4vw;
+    top: 58px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: min(320px, 92vw);
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    width: 100%;
+  }
+}
