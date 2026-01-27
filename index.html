@@ -1,103 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Hull — Web Developer</title>
-    <meta name="description" content="Sarah Hull is a web developer building clean, thoughtful web experiences.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarah Hull — Web Developer</title>
+  <meta name="description" content="Sarah Hull is a web developer building clean, thoughtful web experiences." />
 
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    </header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#hero" aria-label="Go to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Sarah Hull</span>
+      </a>
 
-    <main>
-        <section id="hero">
-            <h1>Sarah Hull</h1>
-            <p>A web developer building clean, thoughtful web experiences.</p>
-        </section>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        ☰
+      </button>
 
-        <section id="projects">
-        <h2>Projects</h2>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
 
-        <ul>
-            <li>
-                <h3><a href="https://www.evmobilemods.co.uk/" target="_blank" rel="noopener">EV Mobile Mods — Client Website</a></h3>
-                <p>
-                    A fully responsive business website built for a real client in the automotive EV space.
-                    The site was designed and developed from scratch, with a focus on clarity, performance,
-                    and usability across devices.
-                </p>
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <span class="sr-only">Toggle theme</span>
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
 
-                <h4>Key features &amp; work</h4>
-                <ul>
-                    <li>Custom HTML, CSS, and JavaScript (no frameworks)</li>
-                    <li>Responsive layout with mobile-first considerations</li>
-                    <li>Image carousel with lightbox gallery functionality</li>
-                    <li>Accessible navigation and semantic markup</li>
-                    <li>Deployed via Netlify with continuous deployment from GitHub</li>
-                    <li>Ongoing iteration based on client feedback</li>
-                </ul>
+  <main id="main" class="container">
+    <section id="hero">
+      <h1>Sarah Hull</h1>
+      <p>A web developer building clean, thoughtful web experiences.</p>
+    </section>
 
-                <p>
-                    This project reflects my ability to translate client requirements into a polished,
-                    production-ready website and manage the full deployment lifecycle.
-            </p>
-            </li>
+    <section id="projects">
+      <h2>Projects</h2>
 
-            <li>
-                <h3>
-                <a href="https://illustrationwebsite-production-899c.up.railway.app/" target="_blank" rel="noopener">
-                    Illustration Website — Full-Stack Web App
-                </a>
-                </h3>
+      <ul>
+        <li>
+          <h3>
+            <a href="https://www.evmobilemods.co.uk/" target="_blank" rel="noopener">
+              EV Mobile Mods — Client Website
+            </a>
+          </h3>
 
-                <p>
-                <strong>Note:</strong> Checkout is intentionally not enabled, as this project focuses on frontend–backend
-                integration rather than live sales.
-                </p>
+          <p>
+            A fully responsive business website built for a real client in the automotive EV space.
+            The site was designed and developed from scratch, with a focus on clarity, performance,
+            and usability across devices.
+          </p>
 
-                <p>
-                A full-stack web application featuring a gallery and shop powered by a backend service.
-                While the content is illustration-based, the primary focus of this project was designing,
-                building, and deploying a working frontend–backend system.
-                </p>
+          <h4>Key features &amp; work</h4>
+          <ul class="features">
+            <li>Custom HTML, CSS, and JavaScript (no frameworks)</li>
+            <li>Responsive layout with mobile-first considerations</li>
+            <li>Image carousel with lightbox gallery functionality</li>
+            <li>Accessible navigation and semantic markup</li>
+            <li>Deployed via Netlify with continuous deployment from GitHub</li>
+            <li>Ongoing iteration based on client feedback</li>
+          </ul>
 
-                <h4>Key features &amp; work</h4>
-                <ul>
-                <li>Frontend built with HTML, CSS, and JavaScript</li>
-                <li>Backend deployed on Railway, serving product data from a database</li>
-                <li>API-driven, dynamic product listings</li>
-                <li>Shopping cart functionality implemented in JavaScript</li>
-                <li>Frontend and backend deployed separately and integrated in production</li>
-                <li>Managed hosting and cost trade-offs by selectively running services</li>
-                </ul>
+          <p>
+            This project reflects my ability to translate client requirements into a polished,
+            production-ready website and manage the full deployment lifecycle.
+          </p>
+        </li>
 
-                <p>
-                This project demonstrates my understanding of full-stack concepts, API-driven data flow,
-                deployment strategies, and maintaining real-world web applications.
-                </p>
+        <li>
+          <h3>
+            <a href="https://illustrationwebsite-production-899c.up.railway.app/" target="_blank" rel="noopener">
+              Illustration Website — Full-Stack Web App
+            </a>
+          </h3>
 
-            </li>
-        </ul>
-        </section>
+          <p>
+            <strong>Note:</strong> Checkout is intentionally not enabled, as this project focuses on frontend–backend
+            integration rather than live sales.
+          </p>
 
+          <p>
+            A full-stack web application featuring a gallery and shop powered by a backend service.
+            While the content is illustration-based, the primary focus of this project was designing,
+            building, and deploying a working frontend–backend system.
+          </p>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>I spent 11 years working as a C-level Executive Assistant, most recently in a fast-paced FinTech environment. While supporting the CPO and CTO, I worked closely with engineering and product teams, which sparked my interest in how software is built and shipped.</p>
-            <p>I retrained in software development through a Professional Certificate in Full Stack Software Engineering with IBM and three Code First Girls Kickstarters. Since then, I’ve made learning part of my daily routine, building and deploying small web applications to strengthen my understanding of core concepts.</p>
-            <p>I’m now focused on continuing to grow as a developer and am seeking a junior software development role as the first step in a long-term career in technology.</p>
-        </section>
+          <h4>Key features &amp; work</h4>
+          <ul class="features">
+            <li>Frontend built with HTML, CSS, and JavaScript</li>
+            <li>Backend deployed on Railway, serving product data from a database</li>
+            <li>API-driven, dynamic product listings</li>
+            <li>Shopping cart functionality implemented in JavaScript</li>
+            <li>Frontend and backend deployed separately and integrated in production</li>
+            <li>Managed hosting and cost trade-offs by selectively running services</li>
+          </ul>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><a href="tel:+447546923704"> Call: +44 (0)7546923704</a></p>
-            <p><a href="mailto:sarahthull@gmail.com">Email: sarahthull@gmail.com</a></p>
-        </section>
-    </main>
+          <p>
+            This project demonstrates my understanding of full-stack concepts, API-driven data flow,
+            deployment strategies, and maintaining real-world web applications.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-    
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I spent 11 years working as a C-level Executive Assistant, most recently in a fast-paced FinTech environment.
+        While supporting the CPO and CTO, I worked closely with engineering and product teams, which sparked my interest
+        in how software is built and shipped.
+      </p>
+      <p>
+        I retrained in software development through a Professional Certificate in Full Stack Software Engineering with IBM
+        and three Code First Girls Kickstarters. Since then, I’ve made learning part of my daily routine, building and
+        deploying small web applications to strengthen my understanding of core concepts.
+      </p>
+      <p>
+        I’m now focused on continuing to grow as a developer and am seeking a junior software development role as the first
+        step in a long-term career in technology.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="tel:+447546923704">Call: +44 (0)7546923704</a></p>
+      <p><a href="mailto:sarahthull@gmail.com">Email: sarahthull@gmail.com</a></p>
+    </section>
+  </main>
 </body>
 </html>
