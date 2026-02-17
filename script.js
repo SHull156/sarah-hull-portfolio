@@ -57,3 +57,10 @@ themeToggle?.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", "false");
   }
 });
+
+// external links open in new browser window
+document.querySelectorAll('a[href^="http"]').forEach(link => {
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener noreferrer");
+});
+
