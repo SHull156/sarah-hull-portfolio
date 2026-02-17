@@ -1,3 +1,4 @@
+//burger menu for mobile
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.getElementById("site-nav");
 
@@ -21,3 +22,33 @@ if (navToggle && siteNav) {
         }
     });
 }
+
+//theme toggle
+
+const themeToggle = document.querySelector(".theme-toggle");
+const root = document.documentElement;
+const THEME_KEY = "theme";
+
+const setTheme = (theme) => {
+    if (theme === "light") {
+        root.setAttribute("data-theme", "light");
+        themeToggle?.setAttribute("aria-pressed", "true");
+        if(themeToggle) themeToggle.textContent = "☀️";
+    } else {
+        root.removeAttribute("data-theme");
+        themeToggle?.setAttribute("aria-pressed", "false");
+        if (themeToggle) themeToggle.textContent = "🌙";
+    }
+};
+
+const savedTheme = localStorage.getItem(THEME_KEY);
+const systemPrefersLight = window.matchMedia?.("(prefers-color-scheme: light)")?.matches;
+
+setTheme(savedTheme ?? (systemPrefersLight ? "light" : "dark"));
+
+themeToggle?.addEventListener("click", () => {
+    const isLight = root.getAttribute("data-theme") === "light";
+    const nextTheme = isLight ? "dark" : "light";
+    localStorage.setItem(THEME_KEY, nextTheme);
+    setTheme(nextTheme);
+});
