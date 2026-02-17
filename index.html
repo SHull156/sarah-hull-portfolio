@@ -42,76 +42,129 @@
     <section id="hero">
       <h1>Sarah Hull</h1>
       <p>A web developer building clean, thoughtful web experiences.</p>
+      <p class="hero-proof">
+        HTML • CSS • JavaScript • C# • React • Python • MySQL
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="https://github.com/SHull156" target="_blank" rel="noopener">GitHub</a>
+
+      </div>
+
+
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Projects</h2>
 
-      <ul>
-        <li>
-          <h3>
-            <a href="https://www.evmobilemods.co.uk/" target="_blank" rel="noopener">
-              EV Mobile Mods — Client Website
-            </a>
-          </h3>
+      <div class="projects-grid">
 
-          <p>
-            A fully responsive business website built for a real client in the automotive EV space.
-            The site was designed and developed from scratch, with a focus on clarity, performance,
-            and usability across devices.
-          </p>
+        <article class="project-card">
+          <img src="images/EVMobileMods.jpg" alt="Screenshot of EV Mobile Mods homepage" />
 
-          <h4>Key features &amp; work</h4>
-          <ul class="features">
-            <li>Custom HTML, CSS, and JavaScript (no frameworks)</li>
-            <li>Responsive layout with mobile-first considerations</li>
-            <li>Image carousel with lightbox gallery functionality</li>
-            <li>Accessible navigation and semantic markup</li>
-            <li>Deployed via Netlify with continuous deployment from GitHub</li>
-            <li>Ongoing iteration based on client feedback</li>
-          </ul>
+          <div class="project-content">
+            <h3>EV Mobile Mods</h3>
+            <p class="stack">HTML • CSS • JavaScript</p>
+            <p>A fully responsive business website built for a real client in the automotive EV space.
+              The site was designed and developed from scratch, with a focus on clarity, performance,
+              and usability across devices.</p>
 
-          <p>
-            This project reflects my ability to translate client requirements into a polished,
-            production-ready website and manage the full deployment lifecycle.
-          </p>
-        </li>
+            <ul class="highlights">
+              <li>Custom HTML, CSS, and JavaScript (no frameworks)</li>
+              <li>Responsive layout with mobile-first considerations</li>
+              <li>Image carousel with lightbox gallery functionality</li>
+              <li>Accessible navigation and semantic markup</li>
+              <li>Deployed via Netlify with continuous deployment from GitHub</li>
+              <li>Ongoing iteration based on client feedback</li>
+            </ul>
 
-        <li>
-          <h3>
-            <a href="https://illustrationwebsite-production-899c.up.railway.app/" target="_blank" rel="noopener">
-              Illustration Website — Full-Stack Web App
-            </a>
-          </h3>
+            <div class="project-links">
+              <a href="https://www.evmobilemods.co.uk/">Live</a>
+              <a href="https://github.com/SHull156/ev_mobile_mods">Code</a>
+            </div>
+          </div>
+        </article>
 
-          <p>
-            <strong>Note:</strong> Checkout is intentionally not enabled, as this project focuses on frontend–backend
-            integration rather than live sales.
-          </p>
+        <article class="project-card">
+          <img src="images/SarahRolphIllustration.jpg" alt="Screenshot of Sarah Rolph Illustration shop page" />
 
-          <p>
-            A full-stack web application featuring a gallery and shop powered by a backend service.
-            While the content is illustration-based, the primary focus of this project was designing,
-            building, and deploying a working frontend–backend system.
-          </p>
+          <div class="project-content">
+            <h3>Sarah Rolph Illustration</h3>
+            <p class="stack">HTML • CSS • JavaScript</p>
+            <p>
+              A full-stack web application featuring a gallery and shop powered by a backend service.
+              While the content is illustration-based, the primary focus of this project was designing,
+              building, and deploying a working frontend–backend system.
+            </p>
 
-          <h4>Key features &amp; work</h4>
-          <ul class="features">
-            <li>Frontend built with HTML, CSS, and JavaScript</li>
-            <li>Backend deployed on Railway, serving product data from a database</li>
-            <li>API-driven, dynamic product listings</li>
-            <li>Shopping cart functionality implemented in JavaScript</li>
-            <li>Frontend and backend deployed separately and integrated in production</li>
-            <li>Managed hosting and cost trade-offs by selectively running services</li>
-          </ul>
+            <ul class="highlights">
+              <li>Frontend built with HTML, CSS, and JavaScript</li>
+              <li>Backend deployed on Railway, serving product data from a database</li>
+              <li>API-driven, dynamic product listings</li>
+              <li>Shopping cart functionality implemented in JavaScript</li>
+              <li>Frontend and backend deployed separately and integrated in production</li>
+              <li>Managed hosting and cost trade-offs by selectively running services</li>
+            </ul>
 
-          <p>
-            This project demonstrates my understanding of full-stack concepts, API-driven data flow,
-            deployment strategies, and maintaining real-world web applications.
-          </p>
-        </li>
-      </ul>
+            <div class="project-links">
+              <a href="https://www.sarah-rolph.com/">Live</a>
+              <a href="https://github.com/SHull156/illustration_website">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/RunPal.jpg" alt="Screenshot of RunPal plan page" />
+
+          <div class="project-content">
+            <h3>RunPal</h3>
+            <p class="stack">HTML • CSS • JavaScript</p>
+            <p>
+            RunPal is a lightweight, single-user running training plan generator that prioritises runner self-assessment 
+            over aggressive optimisation.
+            </p>
+
+            <ul class="highlights">
+              <li>Dynamic plan generation</li>
+              <li>Local persistence (no login)</li>
+              <li>Wellness-based run adjustments</li>
+              <li>Immediate feedback</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://shull156.github.io/RunPal/">Live</a>
+              <a href="https://github.com/SHull156/RunPal">Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+
+      <div class="skills-grid">
+        <div>
+          <h3>Languages</h3>
+          <p>JavaScript, C#, Python, SQL</p>
+        </div>
+        <div>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, React</p>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <p>Node.js, Express</p>
+        </div>
+        <div>
+          <h3>Tools & Deployment</h3>
+          <p>Git, GitHub, Netlify, Railway</p>
+        </div>
+      </div>
+    </section>
+
 
     <section id="about">
       <h2>About</h2>
